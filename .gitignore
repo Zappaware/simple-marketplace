@@ -1,0 +1,15 @@
+# Ignore .idea folder in the root directory
+/.idea/
+
+# Ignore .idea folder in all subdirectories
+**/.idea/
+
+# Ignore all .idea folders globally
+.idea/
+
+# Ignore all __pycache__ folders
+__pycache__/
+
+# Ignore virtual environment folder
+venv/
+

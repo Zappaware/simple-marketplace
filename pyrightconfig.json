@@ -1,0 +1,10 @@
+{
+  "venvPath": ".",
+  "venv": "env",
+  "extraPaths": ["env/Lib/site-packages"],
+  "exclude": ["**/__pycache__", "**/node_modules"],
+  "reportMissingImports": false,
+  "reportUnresolvedImport": false,
+  "reportMissingTypeStubs": false,
+  "reportAttributeAccessIssue": false
+}

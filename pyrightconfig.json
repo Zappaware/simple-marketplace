@@ -1,10 +1,51 @@
 {
-  "venvPath": ".",
-  "venv": "env",
-  "extraPaths": ["env/Lib/site-packages"],
-  "exclude": ["**/__pycache__", "**/node_modules"],
+  "include": ["puddle"],
+
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "puddle/experimental",
+    "puddle/typestubs"
+  ],
+
+  "ignore": ["puddle/oldstuff"],
+
+  "defineConstant": {
+    "DEBUG": true
+  },
+
   "reportMissingImports": false,
-  "reportUnresolvedImport": false,
   "reportMissingTypeStubs": false,
-  "reportAttributeAccessIssue": false
+  "reportUnknownParameterType": "none",
+  "reportMissingParameterType": "none",
+  "reportUnknownVariableType": "none",
+  "reportUnknownMemberType": "none",
+  "reportUnusedImport": "none",
+  "reportUnusedParameter": "none",
+
+  "pythonVersion": "3.6",
+  "pythonPlatform": "Linux",
+
+  "executionEnvironments": [
+    {
+      "root": "puddle/web",
+      "pythonVersion": "3.5",
+      "pythonPlatform": "Windows",
+      "extraPaths": ["puddle/service_libs"],
+      "reportMissingImports": "warning"
+    },
+    {
+      "root": "puddle/sdk",
+      "pythonVersion": "3.0",
+      "extraPaths": ["puddle/backend"]
+    },
+    {
+      "root": "puddle/tests",
+      "reportPrivateUsage": false,
+      "extraPaths": ["puddle/tests/e2e", "puddle/sdk"]
+    },
+    {
+      "root": "puddle"
+    }
+  ]
 }
